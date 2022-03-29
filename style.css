@@ -54,17 +54,13 @@ header {
 
                                     /* Explore */
 .explore {
-    display: flex;
     text-align: center;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    flex-wrap: wrap;
     background-color: #f6f6f6;
 }
 .explore h2 {
     margin: 1px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .explore p {
@@ -82,7 +78,7 @@ header {
     cursor: pointer;
     opacity: 0.9;
     transition: 0.5s;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 .explore button:hover {
     opacity: 1;
@@ -110,10 +106,10 @@ header {
 }
 
 .fontionnement li {
+    display: flex;
     align-items: center;
     border-radius: 20px;
     box-shadow: 2px 2px 7px -2px #464646;
-    display: flex;
     flex-grow: 1;
     list-style-type: none;
     padding: 15px 25px;
@@ -138,6 +134,12 @@ header {
 
 
 
+
+
+img {
+    height: 120px;
+    width: 120px;
+}
 
                                     /* Footer */
 footer {
