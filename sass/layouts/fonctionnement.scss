@@ -1,11 +1,24 @@
 .fontionnement {
-    margin-bottom: 20px;
+    div {
+        position: relative;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
 
     ol {
+
         display: flex;
         gap: 20px;
         border: 1px solid red;
         margin: 20px;
+
+        @media (max-width: 1000px) {
+              flex-direction: column;
+        }
     }
 
     li {
@@ -14,30 +27,23 @@
         border-radius: 20px;
         box-shadow: 2px 2px 7px -2px #464646;
         flex-grow: 1;
-        list-style-type: none;
         padding: 15px 25px;
         cursor: pointer;
         transition: 0.5s;
-    }
 
+        &:hover {
+            transform: scale(1.03);
+            background-color: #f5edff;
+        }
+
+        &:hover i {
+            color: #9356DC;
+        }
+    }
+    
     i {
         margin: 10px;
         color: #7e7e7e;
         font-size: 20px;
-    }
-
-    li:hover {
-        transform: scale(1.03);
-        background-color: #f5edff;
-    }
-
-    li:hover i {
-        color: #9356DC;
-    }
-}
-
-@media (max-width: 1000px) {
-    .fontionnement ol {
-      flex-direction: column;
     }
 }

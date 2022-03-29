@@ -76,8 +76,13 @@ header {
   transform: scale(1.03);
 }
 
-.fontionnement {
-  margin-bottom: 20px;
+.fontionnement div {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+.fontionnement h2 {
+  margin-top: 0;
 }
 .fontionnement ol {
   display: flex;
@@ -85,21 +90,20 @@ header {
   border: 1px solid red;
   margin: 20px;
 }
+@media (max-width: 1000px) {
+  .fontionnement ol {
+    flex-direction: column;
+  }
+}
 .fontionnement li {
   display: flex;
   align-items: center;
   border-radius: 20px;
   box-shadow: 2px 2px 7px -2px #464646;
   flex-grow: 1;
-  list-style-type: none;
   padding: 15px 25px;
   cursor: pointer;
   transition: 0.5s;
-}
-.fontionnement i {
-  margin: 10px;
-  color: #7e7e7e;
-  font-size: 20px;
 }
 .fontionnement li:hover {
   transform: scale(1.03);
@@ -108,12 +112,12 @@ header {
 .fontionnement li:hover i {
   color: #9356DC;
 }
-
-@media (max-width: 1000px) {
-  .fontionnement ol {
-    flex-direction: column;
-  }
+.fontionnement i {
+  margin: 10px;
+  color: #7e7e7e;
+  font-size: 20px;
 }
+
 footer {
   background-color: #363636;
   color: white;
