@@ -21,18 +21,24 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <!-- CSS -->
-        <!-- <link rel="stylesheet" href="css/style.css"> -->
+        <link rel="stylesheet" href="style.css">
     </head>
 <body>
     
     <header>
         <h1>ohmyfood</h1>
-        <i class="fas fa-map-marker-alt"></i> <span>Paris, Belleville</span>
     </header>
 
+    <!-- city research -->
+    <div class="city">
+        <i class="fas fa-map-marker-alt"></i> 
+        <h2>Paris, Belleville</h2>
+    </div>
+
     <main>
+
         <!-- Zone explore restautant + titre -->
-        <div class="explore">
+        <section class="explore">
             <h1>Réservez le menu qui vous convient</h1>
             <p>
                 Découvrez des restautants d'exception, sélectionnées par nos soins.
@@ -42,10 +48,10 @@
                     Explorer nos restaurants
                 </button>
             </a>
-        </div>
+        </section>
 
         <!-- zone " Fonctionnement "  -->
-        <div class="fontionnement">
+        <section class="fontionnement">
             <h1>Fonctionnement</h1>
             <div class="fontionnement-container">
                 <!-- add 3 button -->
@@ -64,13 +70,13 @@
                     </a>
                     <a href="#">
                         <button>
-                            <i class="fas fa-shopping-cart"></i>
+                            <i class="fas fa-store"></i>
                             <span>Dégustez au restaurant</span>
                         </button>
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
 
 
         <!-- Zone "Restaurants" -->
@@ -147,12 +153,18 @@
 
     <footer>
         <h2>ohmyfood</h2>
-        <div class="footer-box">
-            <i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a>
-            <i class="fas fa-utensils"></i><a href="#">Voir les restaurants</a>
-            <a href="#">Mentions légales </a>
-            <a href="#">Contact </a>
-        </div>
+        <p>
+            <a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a>
+        </p>
+        <p>
+            <a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
+        </p>
+        <p>
+            <a href="#">Mentions légales</a>
+        </p>
+        <p>
+            <a href="mailto:vincent.sniteur@gmail.com">Contact </a>
+        </p>
     </footer>
 </body>
 </html>
