@@ -151,7 +151,7 @@ header {
 }
 .menu-card .menu-nouveau {
   background-color: #99e2d0;
-  color: #0f4d3d;
+  color: #008766;
   padding: 5px;
   position: absolute;
   top: 10px;
@@ -187,17 +187,35 @@ header {
 }
 
 footer {
-  background-color: #363636;
+  background-color: #353535;
   color: white;
 }
-footer h2 {
+footer div {
+  max-width: 1200px;
+  margin: auto;
+}
+@media (min-width: 1000px) {
+  footer div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+footer div a:hover {
+  color: #99e2d0;
+}
+footer div h2 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 500;
 }
-footer p {
+footer div p {
   font-size: 15px;
+  margin: 0;
   font-weight: 300;
   padding: 5px 20px;
+}
+footer div p i {
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

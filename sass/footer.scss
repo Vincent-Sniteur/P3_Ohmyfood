@@ -1,15 +1,36 @@
 footer {
-    background-color: #363636;
+    background-color: #353535;
     color: white;
 
-    h2 {
-        font-family: "Shrikhand",sans-serif;
-        font-weight: 500;
-    }
+    div {
+        max-width: 1200px;
+        margin: auto;
 
-    p {
-        font-size: 15px;
-        font-weight: 300;
-        padding: 5px 20px;
+        @media (min-width:1000px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        a {
+            &:hover {
+                color: #99e2d0;
+            }
+        }
+        h2 {
+            font-family: "Shrikhand",sans-serif;
+            font-weight: 500;
+        }
+    
+        p {
+            font-size: 15px;
+            margin: 0;
+            font-weight: 300;
+            padding: 5px 20px;
+
+            i {
+                margin-right: 5px;
+            }
+        }
     }
 }
