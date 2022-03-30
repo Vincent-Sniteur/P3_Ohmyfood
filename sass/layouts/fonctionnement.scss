@@ -22,12 +22,12 @@
 
     li {
         display: flex;
+        position: relative;
         list-style: none;
         align-items: center;
         border-radius: 20px;
         box-shadow: 2px 2px 7px -2px #353535;
         flex-grow: 1;
-        position: relative;
         padding: 15px 25px;
         cursor: pointer;
         transition: 0.5s;
