@@ -1,4 +1,5 @@
 .fontionnement {
+    counter-reset: fonctionnement;
     div {
         position: relative;
         max-width: 1200px;
@@ -21,13 +22,36 @@
 
     li {
         display: flex;
+        list-style: none;
         align-items: center;
         border-radius: 20px;
-        box-shadow: 2px 2px 7px -2px #464646;
+        box-shadow: 2px 2px 7px -2px #353535;
         flex-grow: 1;
+        position: relative;
         padding: 15px 25px;
         cursor: pointer;
         transition: 0.5s;
+
+        &::before {
+            content: counter(fonctionnement);
+            counter-increment: fonctionnement;
+            background-color: #9356DC;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: -10px;
+            color: white;
+        }
+
+        & i {
+            margin: 10px;
+            color: #7e7e7e;
+            font-size: 20px;
+        }
 
         &:hover {
             transform: scale(1.03);
@@ -37,11 +61,5 @@
         &:hover i {
             color: #9356DC;
         }
-    }
-    
-    i {
-        margin: 10px;
-        color: #7e7e7e;
-        font-size: 20px;
     }
 }
