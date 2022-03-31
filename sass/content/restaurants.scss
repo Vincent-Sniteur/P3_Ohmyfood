@@ -1,100 +1,121 @@
-#menu {
-    background-color: #f6f6f6;
-
-    .menu-content {
-        max-width: 1200px;
-        margin: auto;
-        position: relative;
-    }
+// image au dessus restaurant
+.head-restaurant {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
 }
 
-.menu-list {
-    display: grid;
-    margin: 0 20px;
-    grid-template-columns: repeat(1, 1fr);
-    column-gap: 30px;
-    row-gap: 10px;
-  
-    @media (min-width:1000px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width:1000px) {
-        margin: 0 20px -20px;
-      }
-}
-  
-.menu-card {
-    display: block;
-    background-color: white;
-    border-radius: 20px;
+.restaurants {
     position: relative;
-    transition: 0.5s;
-    margin-bottom: 20px;
-    box-shadow: 2px 1px 5px -3px #363636;
+    max-width: 1200px;
+    margin: auto;
 
-    &:hover {
-        box-shadow: 2px 1px 15px -3px #363636;
-    }
-  
-    .menu-img {
-        height: 200px;
-        width: 100%;
-        border-radius: 20px 20px 0 0;
-        object-fit: cover;
-    }
-    
-    .menu-nouveau {
-        position: relative;
-        background-color: #99e2d0;
-        color: #008766;
-        padding: 5px;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    }
-  
-    .menu-description {
-        padding: 15px;
-        position: relative;
+    .restaurant-title {
         display: flex;
         align-items: center;
-    }
-  
-    .menu-card-content {
-      flex: 1;
-    }
-  
-    h3 {
-        margin: 0;
-        margin-bottom: 5px;
-    }
-  
-    p {
-      margin: 0;
-    }
-  
-    .menu-notation {
-        position: relative;
+        justify-content: center;
+        font-family: "Shrikhand", cursive;
 
-        i {
-            position: absolute;
-            font-size: 30px;
-            right: 20px;
-            top: -20px;
-        }
-        /*Heart version solid > afficher après hover*/
-        .fas {
-            opacity: 0;
-            background-clip: text;
-            color: transparent;
-            -webkit-background-clip: text;
-            transition: 250ms;
+        .restaurant-heart {
+            display: flex;
+            position: relative;
 
-            &:hover {
-                opacity: 1;
-                transform: scale(1.1);
-                background-image: linear-gradient(to top, #9356DC, #FF79DA);
+            i {
+                position: absolute;
+                font-size: 30px;
+                left: 20px;
+                top: -15px;
+            }
+            .fas {
+                opacity: 0;
+                background-clip: text;
+                color: transparent;
+                -webkit-background-clip: text;
+                transition: 250ms;
+    
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1.1);
+                    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+                }
             }
         }
+    }
+
+    .restaurant-menu {
+        display: flex;
+        margin-bottom: 20px;
+
+        @media (max-width: 1000px) {
+            flex-direction: column;
+        }
+
+        article {
+            margin: 0 20px;
+        }
+
+        .restaurant-menu-item {
+            display: flex;
+            height: 80px;
+            list-style: none;
+            border-radius: 20px;
+            box-shadow: 2px 2px 7px -2px #353535;
+            cursor: pointer;
+            transition: 0.5s;
+            flex-grow: 1;
+            flex-direction: column;
+            justify-content: center;
+
+            h4 {
+                display: flex;
+                font-size: 18px;
+                margin: 0 10px 0 10px;
+            }
+
+            p {
+                display: flex;
+                justify-content: space-between;
+                margin: 0 10px 0 10px;
+
+                strong {
+                    margin: 0 10px;
+                }
+            }
+
+            &:hover {
+                transform: scale(1.03);
+                background-color: #f5edff;
+            }
+    
+            &:hover i {
+                color: #9356DC;
+            }
+        }
+    }
+
+    .button-commande {
+        display: flex;
+        justify-content: center;
+
+        button {
+            background-image: linear-gradient(to top, #9356DC, #FF79DA);
+            font-size: 15px;
+            font-weight: bold; 
+            color: #ffffff;
+            padding: 15px 25px;
+            border-radius: 20px 20px 20px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.9;
+            transition: 0.5s;
+            margin-bottom: 20px;
+            box-shadow: 2px 1px 15px -3px #353535;
+    
+            &:hover {
+                opacity: 1;
+                transform: scale(1.03);
+            }   
+        }
+
     }
 }

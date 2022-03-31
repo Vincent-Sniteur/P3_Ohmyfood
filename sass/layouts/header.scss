@@ -2,4 +2,16 @@ header {
     font-family: "Shrikhand", cursive;
     text-align: center;
     border-bottom: 3px solid #cfcfcf;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    a {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 10%;
+    }
 }

@@ -26,6 +26,17 @@ header {
   font-family: "Shrikhand", cursive;
   text-align: center;
   border-bottom: 3px solid #cfcfcf;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header a {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 10%;
 }
 
 .city {
@@ -224,6 +235,112 @@ header {
   opacity: 1;
   transform: scale(1.1);
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
+}
+
+.head-restaurant {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.restaurants {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+.restaurants .restaurant-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Shrikhand", cursive;
+}
+.restaurants .restaurant-title .restaurant-heart {
+  display: flex;
+  position: relative;
+}
+.restaurants .restaurant-title .restaurant-heart i {
+  position: absolute;
+  font-size: 30px;
+  left: 20px;
+  top: -15px;
+}
+.restaurants .restaurant-title .restaurant-heart .fas {
+  opacity: 0;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  transition: 250ms;
+}
+.restaurants .restaurant-title .restaurant-heart .fas:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+}
+.restaurants .restaurant-menu {
+  display: flex;
+  margin-bottom: 20px;
+}
+@media (max-width: 1000px) {
+  .restaurants .restaurant-menu {
+    flex-direction: column;
+  }
+}
+.restaurants .restaurant-menu article {
+  margin: 0 20px;
+}
+.restaurants .restaurant-menu .restaurant-menu-item {
+  display: flex;
+  height: 80px;
+  list-style: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 7px -2px #353535;
+  cursor: pointer;
+  transition: 0.5s;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+.restaurants .restaurant-menu .restaurant-menu-item h4 {
+  display: flex;
+  font-size: 18px;
+  margin: 0 10px 0 10px;
+}
+.restaurants .restaurant-menu .restaurant-menu-item p {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px 0 10px;
+}
+.restaurants .restaurant-menu .restaurant-menu-item p strong {
+  margin: 0 10px;
+}
+.restaurants .restaurant-menu .restaurant-menu-item:hover {
+  transform: scale(1.03);
+  background-color: #f5edff;
+}
+.restaurants .restaurant-menu .restaurant-menu-item:hover i {
+  color: #9356DC;
+}
+.restaurants .button-commande {
+  display: flex;
+  justify-content: center;
+}
+.restaurants .button-commande button {
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 20px 20px 20px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.5s;
+  margin-bottom: 20px;
+  box-shadow: 2px 1px 15px -3px #353535;
+}
+.restaurants .button-commande button:hover {
+  opacity: 1;
+  transform: scale(1.03);
 }
 
 footer {
