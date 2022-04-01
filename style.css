@@ -237,16 +237,28 @@ header a {
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
 }
 
+@keyframes smooth {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .head-restaurant {
-  height: 200px;
+  display: flex;
+  max-height: 250px;
   width: 100%;
   object-fit: cover;
 }
 
 .restaurants {
+  margin: auto;
+  margin-top: -40px;
+  border-radius: 20px;
   position: relative;
   max-width: 1200px;
-  margin: auto;
+  background-color: #f6f6f6;
 }
 .restaurants .restaurant-title {
   display: flex;
@@ -279,6 +291,7 @@ header a {
 .restaurants .restaurant-menu {
   display: flex;
   margin-bottom: 20px;
+  justify-content: center;
 }
 @media (max-width: 1000px) {
   .restaurants .restaurant-menu {
@@ -287,38 +300,92 @@ header a {
 }
 .restaurants .restaurant-menu article {
   margin: 0 20px;
+  position: static;
+}
+.restaurants .restaurant-menu article h3 {
+  margin-bottom: 40px;
+  position: static;
+}
+.restaurants .restaurant-menu article h3 span {
+  border-bottom: 3px solid #99E2D0;
 }
 .restaurants .restaurant-menu .restaurant-menu-item {
   display: flex;
+  background-color: white;
+  position: relative;
   height: 80px;
   list-style: none;
   border-radius: 20px;
-  box-shadow: 2px 2px 7px -2px #353535;
-  cursor: pointer;
-  transition: 0.5s;
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
+  box-shadow: 2px 2px 7px -2px #353535;
+  cursor: pointer;
+  margin: 20px auto 10px auto;
+  padding: 5px;
+  animation: smooth 2000ms backwards;
+  animation-delay: 500ms;
 }
 .restaurants .restaurant-menu .restaurant-menu-item h4 {
-  display: flex;
-  font-size: 18px;
-  margin: 0 10px 0 10px;
+  font-size: 15px;
+  margin: 20px 0 0 0;
 }
 .restaurants .restaurant-menu .restaurant-menu-item p {
+  margin: 0 13% 20px 0px;
+}
+.restaurants .restaurant-menu .restaurant-menu-item strong {
   display: flex;
+  position: absolute;
   justify-content: space-between;
-  margin: 0 10px 0 10px;
+  justify-content: center;
+  align-items: flex-end;
+  right: 10px;
+  bottom: 3px;
 }
-.restaurants .restaurant-menu .restaurant-menu-item p strong {
-  margin: 0 10px;
+.restaurants .restaurant-menu .restaurant-menu-item:hover strong {
+  right: 16%;
+  transition: 500ms;
 }
-.restaurants .restaurant-menu .restaurant-menu-item:hover {
-  transform: scale(1.03);
-  background-color: #f5edff;
+.restaurants .restaurant-menu .restaurant-menu-item:hover .menu-check {
+  transition: 500ms;
+  width: 15%;
+  height: 100%;
+  right: 0%;
+  top: 0%;
+  transform: scale(1);
 }
-.restaurants .restaurant-menu .restaurant-menu-item:hover i {
-  color: #9356DC;
+.restaurants .restaurant-menu .restaurant-menu-item:hover .menu-check i {
+  transform: rotate(-720deg);
+  opacity: 1;
+}
+.restaurants .restaurant-menu .restaurant-menu-item .menu-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: #99E2D0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+  color: white;
+  flex-direction: column;
+  width: 0;
+}
+.restaurants .restaurant-menu .restaurant-menu-item .menu-check i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  color: #99E2D0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  font-size: 20px;
+  transition: 700ms;
+  right: 25%;
+  top: 30%;
 }
 .restaurants .button-commande {
   display: flex;
