@@ -30,6 +30,10 @@
         justify-content: center;
         font-family: "Shrikhand", cursive;
 
+        h2 {
+            font-weight: 500;
+        }
+
         .restaurant-heart {
             display: flex;
             position: relative;
@@ -70,8 +74,14 @@
             position: static;
 
             h3 {
+                display: flex;
                 margin-bottom: 40px;
                 position: static;
+
+                /*Center PC Version*/
+                @media (min-width: 1000px) {
+                    justify-content: center;
+                }
 
                 span {
                     border-bottom: 3px solid #99E2D0;

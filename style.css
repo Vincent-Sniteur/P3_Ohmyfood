@@ -266,6 +266,9 @@ header a {
   justify-content: center;
   font-family: "Shrikhand", cursive;
 }
+.restaurants .restaurant-title h2 {
+  font-weight: 500;
+}
 .restaurants .restaurant-title .restaurant-heart {
   display: flex;
   position: relative;
@@ -303,8 +306,15 @@ header a {
   position: static;
 }
 .restaurants .restaurant-menu article h3 {
+  display: flex;
   margin-bottom: 40px;
   position: static;
+  /*Center PC Version*/
+}
+@media (min-width: 1000px) {
+  .restaurants .restaurant-menu article h3 {
+    justify-content: center;
+  }
 }
 .restaurants .restaurant-menu article h3 span {
   border-bottom: 3px solid #99E2D0;
