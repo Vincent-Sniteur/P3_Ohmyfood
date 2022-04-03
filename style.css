@@ -372,8 +372,9 @@ header a {
   transform: scale(1);
 }
 .restaurants .restaurant-menu .restaurant-menu-item:hover .menu-check i {
-  transform: rotate(-720deg);
+  transform: rotate(-360deg);
   opacity: 1;
+  transition: 700ms;
 }
 .restaurants .restaurant-menu .restaurant-menu-item .menu-check {
   display: flex;
@@ -396,13 +397,12 @@ header a {
   background-color: white;
   color: #99E2D0;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   opacity: 0;
-  font-size: 20px;
-  transition: 700ms;
-  right: 25%;
-  top: 30%;
+  font-size: 15px;
+  right: 35%;
+  top: 35%;
 }
 .restaurants .button-commande {
   display: flex;
