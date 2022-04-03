@@ -94,6 +94,7 @@
             background-color: white;
             position: relative;
             height: 80px;
+            width: 300px;
             list-style: none;
             border-radius: 20px;
             flex-grow: 1;
@@ -105,6 +106,11 @@
             padding: 5px;
             animation: smooth 2000ms backwards;
             animation-delay: 500ms;
+            
+            /*Tablette & Smartphone mode*/
+            @media (max-width: 1000px) {
+                width: 100%;
+            }
 
             h4 {
                 font-size: 15px;
