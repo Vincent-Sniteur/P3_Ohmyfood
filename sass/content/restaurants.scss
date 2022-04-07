@@ -1,9 +1,12 @@
+/*Keyframe Animation Apparition Menu des Restaurants*/
 @keyframes smooth {
-    from {
+   from {
       opacity: 0;
+      transform: translateY(50%);
     }
     to {
       opacity: 1;
+      transform: translateY(0%);
     }
 }
 
@@ -91,7 +94,6 @@
 
         .restaurant-menu-item {
             display: flex;
-            background-color: white;
             position: relative;
             height: 80px;
             width: 300px;
@@ -104,8 +106,15 @@
             cursor: pointer;
             margin: 20px auto 10px auto;
             padding: 5px;
-            animation: smooth 2000ms backwards;
-            animation-delay: 500ms;
+            animation: smooth 3s backwards;
+
+            /*Animation Delay Apparition Child*/
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i}) {
+                    animation-delay: #{$i * 200}ms;
+                }
+            }
+            
             
             /*Tablette & Smartphone mode*/
             @media (max-width: 1000px) {
@@ -152,6 +161,7 @@
                 }
             }
 
+            /*Hover Check du Menu*/
             .menu-check {
                 display: flex;
                 align-items: center;

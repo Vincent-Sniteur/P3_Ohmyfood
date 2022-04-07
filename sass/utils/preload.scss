@@ -1,0 +1,68 @@
+/*Keyframes animation Loader*/
+@keyframes SpinLoader {
+    from  {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// keyframes loader disappear
+@keyframes loader-disappear {
+    to {
+        opacity: 0;
+        transform: scale(0);
+        background-color: transparent;
+    }
+}
+
+/*Gestion Global PreLoader*/
+.preloader {
+    position: fixed;
+    inset: 0;
+    opacity: 0.9;
+    z-index: 9999;
+    background-color: white;
+    animation: loader-disappear 500ms 1.5s forwards;
+
+    /*Affichage "OhMyFood" Loader*/
+    p {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        width: 100%;
+        top: 48%;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    /*Affichage Loader*/
+    .loader {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #9356DC;
+        animation: SpinLoader 1s linear infinite;
+
+        /*Affichage Loader Seconde ligne*/
+        &:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #FF79DA;
+            animation: SpinLoader 2s linear infinite;
+        }
+    }
+}

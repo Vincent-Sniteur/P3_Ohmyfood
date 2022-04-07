@@ -1,11 +1,11 @@
 @use "./sass/base.scss";
 @use "./sass/layouts/header.scss";
-@use "./sass/layouts/city.scss";
+@use "./sass/layouts/ville.scss";
 @use "./sass/layouts/explore.scss";
 @use "./sass/layouts/fonctionnement.scss";
 @use "./sass/content/menu.scss";
 @use "./sass/content/restaurants.scss";
 
 
-
+@use "./sass/utils/preload.scss";
 @use "./sass/footer.scss";

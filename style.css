@@ -39,17 +39,17 @@ header a {
   left: 10%;
 }
 
-.city {
+.ville {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #eaeaea;
   max-height: 60px;
 }
-.city i {
+.ville i {
   font-size: 25px;
 }
-.city h2 {
+.ville h2 {
   font-size: 15px;
 }
 
@@ -237,12 +237,15 @@ header a {
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
 }
 
+/*Keyframe Animation Apparition Menu des Restaurants*/
 @keyframes smooth {
   from {
     opacity: 0;
+    transform: translateY(50%);
   }
   to {
     opacity: 1;
+    transform: translateY(0%);
   }
 }
 .head-restaurant {
@@ -321,7 +324,6 @@ header a {
 }
 .restaurants .restaurant-menu .restaurant-menu-item {
   display: flex;
-  background-color: white;
   position: relative;
   height: 80px;
   width: 300px;
@@ -334,9 +336,40 @@ header a {
   cursor: pointer;
   margin: 20px auto 10px auto;
   padding: 5px;
-  animation: smooth 2000ms backwards;
-  animation-delay: 500ms;
+  animation: smooth 3s backwards;
+  /*Animation Delay Apparition Child*/
   /*Tablette & Smartphone mode*/
+  /*Hover Check du Menu*/
+}
+.restaurants .restaurant-menu .restaurant-menu-item:nth-child(1) {
+  animation-delay: 200ms;
+}
+.restaurants .restaurant-menu .restaurant-menu-item:nth-child(2) {
+  animation-delay: 400ms;
+}
+.restaurants .restaurant-menu .restaurant-menu-item:nth-child(3) {
+  animation-delay: 600ms;
+}
+.restaurants .restaurant-menu .restaurant-menu-item:nth-child(4) {
+  animation-delay: 800ms;
+}
+.restaurants .restaurant-menu .restaurant-menu-item:nth-child(5) {
+  animation-delay: 1000ms;
+}
+.restaurants .restaurant-menu .restaurant-menu-item:nth-child(6) {
+  animation-delay: 1200ms;
+}
+.restaurants .restaurant-menu .restaurant-menu-item:nth-child(7) {
+  animation-delay: 1400ms;
+}
+.restaurants .restaurant-menu .restaurant-menu-item:nth-child(8) {
+  animation-delay: 1600ms;
+}
+.restaurants .restaurant-menu .restaurant-menu-item:nth-child(9) {
+  animation-delay: 1800ms;
+}
+.restaurants .restaurant-menu .restaurant-menu-item:nth-child(10) {
+  animation-delay: 2000ms;
 }
 @media (max-width: 1000px) {
   .restaurants .restaurant-menu .restaurant-menu-item {
@@ -425,6 +458,69 @@ header a {
 .restaurants .button-commande button:hover {
   opacity: 1;
   transform: scale(1.03);
+}
+
+/*Keyframes animation Loader*/
+@keyframes SpinLoader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-disappear {
+  to {
+    opacity: 0;
+    transform: scale(0);
+    background-color: transparent;
+  }
+}
+/*Gestion Global PreLoader*/
+.preloader {
+  position: fixed;
+  inset: 0;
+  opacity: 0.9;
+  z-index: 9999;
+  background-color: white;
+  animation: loader-disappear 500ms 1.5s forwards;
+  /*Affichage "OhMyFood" Loader*/
+  /*Affichage Loader*/
+}
+.preloader p {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  width: 100%;
+  top: 48%;
+  font-size: 20px;
+  font-weight: bold;
+}
+.preloader .loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #9356DC;
+  animation: SpinLoader 1s linear infinite;
+  /*Affichage Loader Seconde ligne*/
+}
+.preloader .loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #FF79DA;
+  animation: SpinLoader 2s linear infinite;
 }
 
 footer {
