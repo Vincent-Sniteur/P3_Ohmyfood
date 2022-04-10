@@ -73,16 +73,18 @@
       margin: 0;
     }
   
+    /*Gestoion Notation - Affichage Coeur*/
     .menu-notation {
         position: relative;
 
+        /*Gestion Icon global Coeur*/
         i {
             position: absolute;
             font-size: 30px;
             right: 20px;
             top: -20px;
         }
-        /*Heart version solid > afficher après hover*/
+        /*Gestion FAS Coeur version solid > afficher après hover*/
         .fas {
             opacity: 0;
             background-clip: text;
@@ -90,6 +92,7 @@
             -webkit-background-clip: text;
             transition: 250ms;
 
+            /*Gestion Coeur en hover*/
             &:hover {
                 opacity: 1;
                 transform: scale(1.1);

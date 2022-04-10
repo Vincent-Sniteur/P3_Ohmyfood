@@ -1,4 +1,4 @@
-/*Keyframe Animation Apparition Menu des Restaurants*/
+/*Keyframe Loader Animation Apparition Menu des Restaurants*/
 @keyframes smooth {
    from {
       opacity: 0;
@@ -10,7 +10,7 @@
     }
 }
 
-
+/*Gestion Header avec image restaurant*/
 .head-restaurant {
     display: flex;
     max-height: 250px;
@@ -18,7 +18,7 @@
     object-fit: cover;
 }
 
-
+/*Gestion Global Cartes Restaurant*/
 .restaurants {
     margin: auto;
     margin-top: -40px;
@@ -27,26 +27,32 @@
     max-width: 1200px;
     background-color: #f6f6f6;
 
+    /*Gestion zone Nom du Restaurant & Coeur */
     .restaurant-title {
         display: flex;
         align-items: center;
         justify-content: center;
         font-family: "Shrikhand", cursive;
 
+        /*Gestion Nom du Restaurant*/
         h2 {
             font-weight: 500;
         }
 
+        /*Gestion Coeur*/
         .restaurant-heart {
             display: flex;
             position: relative;
 
+            /*Gestion Icon global Coeur*/
             i {
                 position: absolute;
                 font-size: 30px;
                 left: 20px;
                 top: -15px;
             }
+
+            /*Gestion FAS Coeur version solid > afficher après hover*/
             .fas {
                 opacity: 0;
                 background-clip: text;
@@ -54,6 +60,7 @@
                 -webkit-background-clip: text;
                 transition: 250ms;
     
+                /*Gestion Coeur en hover*/
                 &:hover {
                     opacity: 1;
                     transform: scale(1.1);
@@ -63,35 +70,41 @@
         }
     }
 
+    /*Gestion Zone Cartes Restaurant*/
     .restaurant-menu {
         display: flex;
         margin-bottom: 20px;
         justify-content: center;
 
+        /*Gestion Tablette & Mobile Cartes Restaurant format d'affichage*/
         @media (max-width: 1000px) {
             flex-direction: column;
         }
 
+        /*Gestion des 3 zones "Entrées, plats, desserts " et Contenue*/
         article {
             margin: 0 20px;
             position: static;
 
+            /*Gestion affichage "Entrées, plats, desserts"*/
             h3 {
                 display: flex;
                 margin-bottom: 40px;
                 position: static;
 
-                /*Center PC Version*/
+                /*Gestion PC version mise au centre*/
                 @media (min-width: 1000px) {
                     justify-content: center;
                 }
 
+                /*Gestion Affichage barre sous "Entrées, plats, desserts"*/
                 span {
                     border-bottom: 3px solid #99E2D0;
                 }
             }
         }
 
+        /*Gestion du Menu des restaurants*/
         .restaurant-menu-item {
             display: flex;
             position: relative;
@@ -99,7 +112,6 @@
             width: 300px;
             list-style: none;
             border-radius: 20px;
-            flex-grow: 1;
             flex-direction: column;
             justify-content: center;
             box-shadow: 2px 2px 7px -2px #353535;
@@ -108,43 +120,54 @@
             padding: 5px;
             animation: smooth 3s backwards;
 
-            /*Animation Delay Apparition Child*/
+            /*Animation Delay Apparition de chaque partie du menu*/
             @for $i from 1 through 10 {
                 &:nth-child(#{$i}) {
                     animation-delay: #{$i * 200}ms;
                 }
             }
             
-            
-            /*Tablette & Smartphone mode*/
+            /*Gestion Tablette & Mobile version Largeur menu*/
             @media (max-width: 1000px) {
                 width: 100%;
             }
 
+            /*Gestion Titre du menu*/
             h4 {
-                font-size: 15px;
-                margin: 20px 0 0 0;
+                margin: 0;
             }
 
+            /*Gestion Description du menu*/
             p {
-                margin: 0 13% 20px 0px;
+                font-size: 15px;
+                margin: 0;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
 
+            /*Gestion Prix du menu*/
             strong {
-                display: flex;
                 position: absolute;
-                justify-content: space-between;
-                justify-content: center;
-                align-items: flex-end;
                 right: 10px;
                 bottom: 3px;
             }
 
+            /*Gestion animation hover de chaque menu*/
             &:hover {
+
+                /*Gestion Hover Description du menu*/
+                p {
+                    margin-right: 50px;
+                }
+
+                /*Gestion Prix hover de chaque menu*/
                 strong {
                     right: 16%;
                     transition: 500ms;
                 }
+
+                /*Gestion affichage Zone de l'animation Check du menu*/
                 .menu-check {
                     transition: 500ms;
                     width: 15%;
@@ -153,28 +176,25 @@
                     top: 0%;
                     transform: scale(1);
 
+                    /*Gestion affichage de l'icon FAS pour l'animation Check du menu*/
                     i {
                         transform: rotate(-360deg);
                         opacity: 1;
-                        transition: 700ms;
+                        transition: 600ms;
                     }
                 }
             }
 
-            /*Hover Check du Menu*/
+            /*Gestion animation, Hover Check du Menu*/
             .menu-check {
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 position: absolute;
                 background-color: #99E2D0;
-                border-top-right-radius: 10px;
-                border-bottom-right-radius: 10px;
-                text-align: center;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
                 color: white;
-                flex-direction: column;
                 width: 0;
 
+                /*Gestion de l'icon FAS pour l'animation Check du menu*/
                 i {
                     display: flex;
                     justify-content: center;
@@ -198,10 +218,12 @@
         }
     }
 
+    /*Gestion Zone du bouton Commander des pages Restaurants*/
     .button-commande {
         display: flex;
         justify-content: center;
 
+        /*Gestion Bouton Commander*/
         button {
             background-image: linear-gradient(to top, #9356DC, #FF79DA);
             font-size: 15px;
@@ -216,6 +238,7 @@
             margin-bottom: 20px;
             box-shadow: 2px 1px 15px -3px #353535;
     
+            /*Gestion Hover Bouton Commander*/
             &:hover {
                 opacity: 1;
                 transform: scale(1.03);
