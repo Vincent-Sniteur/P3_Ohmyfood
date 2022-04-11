@@ -1,34 +1,40 @@
+/*Gestion Global Footer*/
 footer {
     background-color: #353535;
     color:  white;
 
+    /*Gestion Div Footer*/
     div {
         max-width: 1200px;
         margin: auto;
 
+        /*Gestion mode PC / Navigateur > Footer en ligne*/
         @media (min-width:1000px) {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        a {
-            &:hover {
-                color: #99e2d0;
-                text-decoration: underline;
-            }
-        }
+        /*Gestion Titre Footer*/
         h2 {
             font-family: "Shrikhand",sans-serif;
             font-weight: 500;
         }
     
+        /*Gestion Paragraphe Footer*/
         p {
             font-size: 15px;
             margin: 0;
             font-weight: 300;
             padding: 5px 20px;
 
+            /*Gestion Hover Paragraphe*/
+            &:hover {
+                color: #99e2d0;
+                text-decoration: underline;
+            }
+
+            /*Gestion Icon FontAwesome Footer*/
             i {
                 margin-right: 5px;
             }

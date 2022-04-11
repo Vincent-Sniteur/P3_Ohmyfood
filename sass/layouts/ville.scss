@@ -1,3 +1,4 @@
+/*Gestion Ville Global*/
 .ville {
     display: flex;
     justify-content: center;
@@ -5,9 +6,12 @@
     background-color: #eaeaea;
     max-height: 60px;
 
+    /*Gestion Icon FontAwesome*/
     i {
         font-size: 25px;
     }
+
+    /*Gestion Titre*/
     h2 {
         font-size: 15px;
     }

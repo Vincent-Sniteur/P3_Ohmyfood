@@ -1,17 +1,21 @@
+/*Gestion Global Explore*/
 .explore {
     text-align: center;
     flex-direction: column;
     background-color: #f6f6f6;
 
+    /*Gestion Titre Explore*/
     h2 {
         margin: 1px;
         font-size: 25px;
     }
 
+    /*Gestion Paragraphe*/
     p {
         margin: 20px;
     }
 
+    /*Gestion Bouton > "Explorer nos restaurants"*/
     button {
         background-image: linear-gradient(to top, #9356DC, #FF79DA);
         font-size: 15px;
@@ -26,6 +30,7 @@
         margin-bottom: 20px;
         box-shadow: 2px 1px 15px -3px #353535;
 
+        /*Gestion HOVER Bouton > "Explorer nos restaurants"*/
         &:hover {
             opacity: 1;
             transform: scale(1.03);

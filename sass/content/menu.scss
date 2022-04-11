@@ -1,6 +1,8 @@
+/*Gestion Zone Meun Global*/
 #menu {
     background-color: #f6f6f6;
 
+    /*Gestion contenu Menu Global*/
     .menu-content {
         max-width: 1200px;
         margin: auto;
@@ -8,6 +10,7 @@
     }
 }
 
+/*Gestion Liste Menu Global*/
 .menu-list {
     display: grid;
     margin: 0 20px;
@@ -15,14 +18,17 @@
     column-gap: 30px;
     row-gap: 10px;
   
+    /*Gestion PC / Navigateur de la Liste*/
     @media (min-width:1000px) {
       grid-template-columns: repeat(2, 1fr);
     }
+    /*Gestion Mobile / Tablette de la Liste*/
     @media (max-width:1000px) {
         margin: 0 20px -20px;
       }
 }
-  
+
+/*Gestion des Cartes de chaque Menu*/
 .menu-card {
     display: block;
     background-color: white;
@@ -32,10 +38,12 @@
     margin-bottom: 20px;
     box-shadow: 2px 1px 5px -3px #363636;
 
+    /*Gestion Hover de chaque Cartes*/
     &:hover {
         box-shadow: 2px 1px 15px -3px #363636;
     }
   
+    /*Gestion des Images*/
     .menu-img {
         height: 200px;
         width: 100%;
@@ -43,7 +51,8 @@
         object-fit: cover;
     }
     
-    .menu-nouveau {
+    /*Gestion Affichage "Nouveau" sur Cartes des menus*/
+    span {
         position: relative;
         background-color: #99e2d0;
         color: #008766;
@@ -53,27 +62,30 @@
         right: 10px;
     }
   
+    /*Gestion description de chaque Cartes*/
     .menu-description {
         padding: 15px;
         position: relative;
         display: flex;
         align-items: center;
     }
-  
+    /*Gestion Contenu des cartes*/
     .menu-card-content {
       flex: 1;
     }
   
+    /*Gestion Titre de chaque Cartes*/
     h3 {
         margin: 0;
         margin-bottom: 5px;
     }
   
+    /*Gestion Description de chaque Cartes*/
     p {
       margin: 0;
     }
   
-    /*Gestoion Notation - Affichage Coeur*/
+    /*Gestion Notation - Affichage Coeur*/
     .menu-notation {
         position: relative;
 

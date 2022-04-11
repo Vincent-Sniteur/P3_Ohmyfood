@@ -1,3 +1,4 @@
+/*Gestion Header Global*/
 header {
     font-family: "Shrikhand", cursive;
     text-align: center;
@@ -8,6 +9,7 @@ header {
     align-items: center;
     position: relative;
 
+    /*Gestion Lien ( Page des restaurants, flèche retour )*/
     a {
         width: 20px;
         height: 20px;

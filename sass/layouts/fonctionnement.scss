@@ -1,25 +1,34 @@
+/*Gestion Fonctionnement Global*/
 .fontionnement {
+
+    /*Gestion "content" pour Pseudo Element > Numérotation <li>*/
     counter-reset: fonctionnement;
+
+    /*Gestion Div Fonctionnement*/
     div {
         position: relative;
         max-width: 1200px;
         margin: auto;
     }
 
+    /*Gestion Titre Fonctionnement*/
     h2 {
         margin-top: 0;
     }
 
+    /*Gestion Liste Ordonnée*/
     ol {
         display: flex;
         gap: 20px;
         margin: 20px;
 
+        /*Gestion Tablette / Mobile de la Liste > Mise en colonne*/
         @media (max-width: 1000px) {
               flex-direction: column;
         }
     }
 
+    /*Gestion des List-style de la <ol>*/
     li {
         display: flex;
         position: relative;
@@ -32,6 +41,7 @@
         cursor: pointer;
         transition: 0.5s;
 
+        /*Gestion Pseudo Element > Numérotation <li>*/
         &::before {
             content: counter(fonctionnement);
             counter-increment: fonctionnement;
@@ -47,17 +57,20 @@
             color: white;
         }
 
+        /*Gestion des Icons des List-style*/
         & i {
             margin: 10px;
             color: #7e7e7e;
             font-size: 20px;
         }
 
+        /*Gestion Hover des List-style*/
         &:hover {
             transform: scale(1.03);
             background-color: #f5edff;
         }
 
+        /*Gestion Hover des Icons List-style*/
         &:hover i {
             color: #9356DC;
         }
