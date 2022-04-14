@@ -467,7 +467,6 @@ header a {
   height: 100%;
   right: 0%;
   top: 0%;
-  transform: scale(1);
   /*Gestion affichage de l'icon FAS pour l'animation Check du menu*/
 }
 .restaurants .restaurant-menu .restaurant-menu-item:hover .menu-check i {
