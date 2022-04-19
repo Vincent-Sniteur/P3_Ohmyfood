@@ -3,6 +3,7 @@
     text-align: center;
     flex-direction: column;
     background-color: #f6f6f6;
+    height: 230px;
 
     /*Gestion Titre Explore*/
     h2 {
@@ -16,7 +17,7 @@
     }
 
     /*Gestion Bouton > "Explorer nos restaurants"*/
-    button {
+    .button {
         background-image: linear-gradient(to top, #9356DC, #FF79DA);
         font-size: 15px;
         font-weight: bold; 
